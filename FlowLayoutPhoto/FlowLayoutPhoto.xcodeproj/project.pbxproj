@@ -13,6 +13,9 @@
 		187201161F61857200FA5652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187201141F61857200FA5652 /* Main.storyboard */; };
 		187201181F61857200FA5652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187201171F61857200FA5652 /* Assets.xcassets */; };
 		1872011B1F61857200FA5652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187201191F61857200FA5652 /* LaunchScreen.storyboard */; };
+		18DDBE601F618F92006B47A0 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDBE5E1F618F92006B47A0 /* PhotoCell.m */; };
+		18DDBE611F618F92006B47A0 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DDBE5F1F618F92006B47A0 /* PhotoCell.xib */; };
+		18DDBE641F61956A006B47A0 /* FlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDBE631F61956A006B47A0 /* FlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		187201171F61857200FA5652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1872011A1F61857200FA5652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1872011C1F61857200FA5652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DDBE5D1F618F92006B47A0 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		18DDBE5E1F618F92006B47A0 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		18DDBE5F1F618F92006B47A0 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		18DDBE621F61956A006B47A0 /* FlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowLayout.h; sourceTree = "<group>"; };
+		18DDBE631F61956A006B47A0 /* FlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,11 @@
 				187201191F61857200FA5652 /* LaunchScreen.storyboard */,
 				1872011C1F61857200FA5652 /* Info.plist */,
 				1872010B1F61857200FA5652 /* Supporting Files */,
+				18DDBE5D1F618F92006B47A0 /* PhotoCell.h */,
+				18DDBE5E1F618F92006B47A0 /* PhotoCell.m */,
+				18DDBE5F1F618F92006B47A0 /* PhotoCell.xib */,
+				18DDBE621F61956A006B47A0 /* FlowLayout.h */,
+				18DDBE631F61956A006B47A0 /* FlowLayout.m */,
 			);
 			path = FlowLayoutPhoto;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 				TargetAttributes = {
 					187201071F61857200FA5652 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SD98S35TWD;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DDBE611F618F92006B47A0 /* PhotoCell.xib in Resources */,
 				1872011B1F61857200FA5652 /* LaunchScreen.storyboard in Resources */,
 				187201181F61857200FA5652 /* Assets.xcassets in Resources */,
 				187201161F61857200FA5652 /* Main.storyboard in Resources */,
@@ -150,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DDBE601F618F92006B47A0 /* PhotoCell.m in Sources */,
 				187201131F61857200FA5652 /* ViewController.m in Sources */,
+				18DDBE641F61956A006B47A0 /* FlowLayout.m in Sources */,
 				187201101F61857200FA5652 /* AppDelegate.m in Sources */,
 				1872010D1F61857200FA5652 /* main.m in Sources */,
 			);
@@ -270,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SD98S35TWD;
 				INFOPLIST_FILE = FlowLayoutPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.FlowLayoutPhoto;
@@ -281,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SD98S35TWD;
 				INFOPLIST_FILE = FlowLayoutPhoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = apple.FlowLayoutPhoto;
@@ -307,6 +326,7 @@
 				187201211F61857200FA5652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
