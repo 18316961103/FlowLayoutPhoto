@@ -54,6 +54,49 @@
     return attrs;
 }
 
+/**
+ 什么时候调用：用户手指一松开就会调用
+ 作用：确定最终偏移量
+ */
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+    
+    // 拖动比较快时 最终偏移量 不等于 手指离开时偏移量，因为会有缓冲
+    
+    // 最终偏移量
+    CGPoint targetP = [super targetContentOffsetForProposedContentOffset:proposedContentOffset withScrollingVelocity:velocity];
+    
+    // 获取最终显示的区域
+    CGRect targetRect = CGRectMake(targetP.x, 0, self.collectionView.bounds.size.width, MAXFLOAT);
+    
+    // 获取最终显示的cell
+    NSArray *attrs = [super layoutAttributesForElementsInRect:targetRect];
+    
+    CGFloat minDistance = MAXFLOAT;
+    
+    for (UICollectionViewLayoutAttributes *attr in attrs) {
+        
+        // 获取距离中心点距离
+        CGFloat distance = (attr.center.x - targetP.x) - self.collectionView.bounds.size.width * 0.5;
+        
+        if (fabs(distance) < fabs(minDistance)) {
+            minDistance = distance;
+        }
+        
+    }
+    
+    targetP.x += minDistance;
+    
+    if (targetP.x < 0) {
+        targetP.x = 0;
+    }
+    
+    NSLog(@"%f",targetP.x);
+    
+    return targetP;
+    
+    
+}
+
 // 计算collectionView的滑动范围
 //- (CGSize)collectionViewContentSize {
 //    return [super collectionViewContentSize];
@@ -70,14 +113,5 @@
 }
 
 
-/**
- 什么时候调用：用户手指一松开就会调用
- 作用：确定最终偏移量
- */
-- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
-    
-    // 拖动比较快时 最终偏移量 不等于 手指离开时偏移量，因为会有缓冲
-    
-    return [super targetContentOffsetForProposedContentOffset:proposedContentOffset withScrollingVelocity:velocity];
-}
+
 @end
