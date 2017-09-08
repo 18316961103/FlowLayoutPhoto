@@ -44,7 +44,7 @@ static NSString *const ID = @"cell";
     // 修改collectionView的滑动方向，默认垂直方向
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     // 修改行间距
-    layout.minimumLineSpacing = 50;
+    layout.minimumLineSpacing = 10;
     // 修改左右两边的间距
     layout.sectionInset = UIEdgeInsetsMake(0, 100, 0, 100);
     
